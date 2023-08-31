@@ -37,10 +37,11 @@
     vertical-align: middle;
     display: flex;       
     cursor: pointer;
-    padding-left: 50px;    
+    padding-left: 50px;   
 }
 
 .sidebar-container .submenu-sidebar-options:hover{
     background-color:#5570ae;
-    color: white;
+    color: white;     
+    border-left: 5px solid red;
 }
