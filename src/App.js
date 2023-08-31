@@ -1,13 +1,19 @@
-import React from 'react';
-import './App.css';
-import NavBar from './components/navbar/NavBar';
-import SideBar from './components/sidebar/SideBar';
+import React from "react";
+import "./App.css";
+import Footer from "./components/footer/Footer";
+import NavBar from "./components/navbar/NavBar";
+import Parent from "./components/parent/Parent";
+import SideBar from "./components/sidebar/SideBar";
 
 function App() {
   return (
     <div className="App">
       <NavBar />
-      <SideBar />
+      <SideBar />  
+      <Parent>
+              
+      </Parent>
+      <Footer></Footer>
     </div>
   );
 }
