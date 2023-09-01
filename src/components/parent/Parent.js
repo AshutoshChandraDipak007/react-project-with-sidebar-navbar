@@ -1,10 +1,17 @@
 import React from 'react'
+import SideBar from '../sidebar/SideBar'
 
 function Parent({children}) {
   return (
-    <div>
+    <>   
+    <div className='sidebar'>      
+    <SideBar />
+    </div>
+      <div className='parent-component'>
         {children}
     </div>
+    </>
+  
   )
 }
 

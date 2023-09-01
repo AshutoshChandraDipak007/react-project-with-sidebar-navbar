@@ -19,15 +19,15 @@ export const sideBarData=[
             {
                 title:"New Request",
                 icon:<AccountBalanceIcon style={iconStyle}/>,
-                to:"/hame/user/"
+                to:"/newrequest"
             }, {
                 title:"My Request",
                 icon:<AccountBalanceIcon style={iconStyle}/>,
-                to:"/hame/user/"
+                to:"/myrequest"
             }, {
                 title:"Key Owner Search",
                 icon:<AccountBalanceIcon style={iconStyle}/>,
-                to:"/hame/user/"
+                to:"/keyownsearch"
             }
         ]
     },
@@ -67,13 +67,13 @@ export const sideBarData=[
         subNavFlag:false,  
         subNav: [
             {
-                title:"New Request",
+                title:"User Management",
                 icon:<AccountBalanceIcon style={iconStyle}/>,
-                to:"/hame/user/"
+                to:"/user"
             }, {
-                title:"My Request",
+                title:"Support",
                 icon:<AccountBalanceIcon style={iconStyle}/>,
-                to:"/hame/user/"
+                to:"/support"
             }
         ]  
     }

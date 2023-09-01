@@ -3,20 +3,25 @@ import "./navbar.css";
 import MenuIcon from "@mui/icons-material/Menu";
 import { navBarData } from "../../storeData/navbarItems";
 import { Button, Link } from "@mui/material";
-import SiwosLogo from "../images/LogoAspose.png";
+import SiwosLogo from "../../images/BmwLog.jpg";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 
 export default function NavBar() {
   const imageStyle = {
-    width: 200,
-    height: 50,
-    margin:"0 0 -10px -20px",
+    width: 50,
+    height: 40,
+    marginBottom:"-15px",
+    marginLeft:'25px'
   };
 
   const buttonStyle = {
-    marginBottom: 15,
+    marginBottom: 10,
   };
+
+  const linkStyle={
+    textDecoration:'none',
+  }
 
   return (
     <div className="navbar">
@@ -30,7 +35,7 @@ export default function NavBar() {
       <div className="right-menu-items">
         {navBarData?.map((item,index) => {
           return (
-            <Link>             
+            <Link style={linkStyle}>             
                  <DisplayNavbarItems item={item} key={index}/>             
             </Link>
           );

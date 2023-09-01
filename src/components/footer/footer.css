@@ -1,0 +1,16 @@
+.footer h5{
+   text-align: center;
+    line-height: 30px;
+    justify-content: center;
+    display: flex;
+}
+
+.footer {
+    position:fixed;
+    bottom:0px;
+    height:30px;
+    width:100%;
+    background:#020202;   
+    display: flex;
+    color: white;
+}
