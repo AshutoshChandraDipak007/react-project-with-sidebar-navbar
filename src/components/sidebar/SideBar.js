@@ -1,9 +1,24 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { sideBarData } from "../../storeData/sidebarItems";
 import "./sidebar.css";
+import { useSelector, useDispatch } from 'react-redux';
 
 function SideBar() {
+
+ const isToggle= useSelector((state) => state.counter.isToggle)
+
+  return (
+    <>
+      {isToggle &&(<SidebarWithLogoAndTitle />)}
+      {!isToggle &&(<SideBarWithLogoOnly />)}
+    </>
+  );
+}
+
+export default SideBar;
+
+function SidebarWithLogoAndTitle(){
   const [navBarData, setNavBarData] = useState(sideBarData);
 
   const handleSubMenu = (id) => {
@@ -48,6 +63,23 @@ function SideBar() {
       })}
     </div>
   );
-}
 
-export default SideBar;
+}
+function SideBarWithLogoOnly(){
+  return (<div className="sidebar-container-only-icon">
+  {sideBarData?.map((item, index) => {
+    return (
+      <>
+        <div         
+          className="sidebar-options"
+          key={index}>
+          <Link style={{ textDecoration: "none", color: "#e1e9fc" }}>
+            {item?.icon}
+          </Link>
+        </div>           
+      </>
+    );
+  })}
+</div>)
+
+}

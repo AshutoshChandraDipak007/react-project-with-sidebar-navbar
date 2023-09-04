@@ -1,19 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./navbar.css";
 import MenuIcon from "@mui/icons-material/Menu";
 import { navBarData } from "../../storeData/navbarItems";
 import { Button, Link } from "@mui/material";
-import SiwosLogo from "../../images/BmwLog.jpg";
+import SiwosLogo from "../../images/AudiLogo.png";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
+import { useDispatch, useSelector } from "react-redux";
+import {toggleOption} from '../../features/counter/counterSlice';
 
 export default function NavBar() {
+  const dispatch = useDispatch();
+  const [flag, setFlag] = useState(useSelector((state) => state.counter.isToggle)); 
+
   const imageStyle = {
-    width: 50,
+    width: 100,
     height: 40,
     marginBottom:"-15px",
     marginLeft:'25px'
-  };
+  };  
 
   const buttonStyle = {
     marginBottom: 10,
@@ -23,10 +28,16 @@ export default function NavBar() {
     textDecoration:'none',
   }
 
+
+const handleClick=()=>{
+  dispatch(toggleOption(!flag));
+  setFlag(!flag);
+}
+
   return (
     <div className="navbar">
       <div className="left-menu-items">
-        <Button style={buttonStyle}>
+        <Button onClick={handleClick} style={buttonStyle}>
           <MenuIcon style={{color: "white"}} />
         </Button>
         <img src={SiwosLogo} style={imageStyle}/>
@@ -56,19 +67,18 @@ function DisplayNavbarItems(props) {
       )}
       {name === "Language" && (
         <span>
-          <LanguageDropdown title={title} icon={icon} />
+          <LanguageChange title={title} icon={icon} />
         </span>
       )}
     </>
   );
 }
 
-function LanguageDropdown(props) {
+function LanguageChange(props) {
   const { icon } = props;
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [language, setLanguage] = React.useState("English");
   const open = Boolean(anchorEl);
-
   const buttonStyle = {
     textTransform: "none",
     color: "black",

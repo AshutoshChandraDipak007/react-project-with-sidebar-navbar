@@ -43,3 +43,27 @@
     color: white;     
     border-left: 5px solid red;
   }
+
+
+  .sidebar-container-only-icon{
+    width:70px;
+    background-color: black;
+    color:black;
+    height: 100vh;  
+    padding: 0;
+    top: 0;
+  }
+
+  .sidebar-container-only-icon .sidebar-options{
+    color: #e1e9fc;;
+    text-align: left;
+    padding: 15px;
+    vertical-align: middle;
+    display: flex;    
+    justify-content: space-between;    
+    cursor: pointer;    
+  }
+  
+  .sidebar-container-only-icon .sidebar-options:hover{
+    background-color:#5570ae;
+  }

@@ -10,6 +10,7 @@ import Home from "./components/home/Home";
 import Newrequest from "./components/newrequest/Newrequest";
 import Support from "./components/support/Support";
 import Keyownsearch from "./components/keyownsearch/Keyownsearch";
+import Myrequest from "./components/myrequest/Myrequest";
 
 function App() {
   return (
@@ -18,11 +19,11 @@ function App() {
       <BrowserRouter>
       <Parent>
         <Routes>
-        <Route path="" element={<Home />} />
+            <Route path="" element={<Home />} />
             <Route path="user" element={<UserManagement />} />
             <Route path="support" element={<Support />} />
             <Route path="newrequest" element={<Newrequest />} />
-            <Route path="myrequest" element={<UserManagement />} />           
+            <Route path="myrequest" element={<Myrequest />} />           
             <Route path="keyownsearch" element={<Keyownsearch />} />           
           </Routes>
         </Parent>
