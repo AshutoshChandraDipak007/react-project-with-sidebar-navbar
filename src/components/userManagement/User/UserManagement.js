@@ -8,6 +8,8 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { useDispatch, useSelector } from 'react-redux';
+import UserManagementHome from '../user-home-page/userManagementHome';
+import PageHeader from '../pannel-header/PageHeader';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -54,7 +56,8 @@ export default function CustomizedTables() {
 
   return (
     <TableContainer component={Paper}>
-      <Table sx={flag?{minWidth: 985}:{minWidth:1160}} size="small" aria-label="a dense table">
+      <PageHeader path={"/user"} title={'User managements'} backButtonName={'Back'}></PageHeader> 
+      <Table sx={flag?{minWidth: '77vw'}:{minWidth: '90vw'}} size="small" aria-label="a dense table">
         <TableHead>
           <TableRow>
             <StyledTableCell>Dessert (100g serving)</StyledTableCell>

@@ -1,0 +1,14 @@
+.home-page{
+  display: block;
+  padding-left: 10px;
+}
+
+.card-item{      
+    display: flex;
+    flex-wrap: wrap;   
+    justify-content: left;
+}
+.item{    
+    justify-content: space-between; 
+    margin: 30px;
+}

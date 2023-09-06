@@ -1,0 +1,7 @@
+.pageHeader{
+    height: 70px;
+    padding: 5px;
+}
+.pageHeader label{
+    font-size: small;
+}
