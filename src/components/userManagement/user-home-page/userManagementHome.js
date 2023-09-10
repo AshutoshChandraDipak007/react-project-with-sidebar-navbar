@@ -1,15 +1,11 @@
 import React from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Typography from "@mui/material/Typography";
-import { CardActionArea } from "@mui/material";
+import { CardActionArea, Typography } from "@mui/material";
 import "./style.css";
 import { cardData } from "../../../storeData/cardData";
 import { styled } from '@mui/material/styles';
-import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
-import Box from '@mui/material/Box';
 import { Link } from "react-router-dom";
 
 const Item = styled(Paper)(({ theme }) => ({

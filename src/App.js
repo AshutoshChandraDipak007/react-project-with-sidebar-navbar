@@ -11,6 +11,8 @@ import Keyownsearch from "./components/keyownsearch/Keyownsearch";
 import Myrequest from "./components/myrequest/Myrequest";
 import CustomizedTables from "./components/userManagement/User/UserManagement";
 import UserManagementHome from "./components/userManagement/user-home-page/userManagementHome";
+import SelectAllTransferList from "./components/keyownsearch/Keyownsearch";
+import TransferList from "./components/keyownsearch/Keyownsearch";
 
 function App() {
   return (
@@ -25,7 +27,7 @@ function App() {
             <Route path="support" element={<Support />} />
             <Route path="newrequest" element={<Newrequest />} />
             <Route path="myrequest" element={<Myrequest />} />           
-            <Route path="keyownsearch" element={<Keyownsearch />} />           
+            <Route path="keyownsearch" element={<TransferList />} />           
           </Routes>
         </Parent>
       </BrowserRouter>
